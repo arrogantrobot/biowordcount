@@ -1,4 +1,4 @@
-package io.openb.titv;
+package io.openb.biowordcount;
 
 import java.io.IOException;
 import java.util.*;

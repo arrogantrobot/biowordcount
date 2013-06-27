@@ -1,4 +1,4 @@
-package io.openb.titv;
+package io.openb.biowordcount;
 
 import java.math.BigInteger;
 import java.util.ArrayList;
