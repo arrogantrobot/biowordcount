@@ -4,12 +4,12 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.openb.io.titv.WordCount</groupId>
-    <artifactId>wordcount</artifactId>
+    <groupId>com.openb.io.titv.BioWordCount</groupId>
+    <artifactId>biowordcount</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
 
-    <name>WordCount</name>
+    <name>BioWordCount</name>
     <url>http://maven.apache.org</url>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -25,14 +25,14 @@
     </dependencies>
 
     <build>
-        <finalName>WordCount</finalName>
+        <finalName>BioWordCount</finalName>
         <plugins>
             <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>com.etapix.wordcount.App</mainClass>
+                            <mainClass>io.openb.biowordcount.App</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
