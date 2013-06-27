@@ -1,4 +1,4 @@
-package com.openb.io.titv;
+package io.openb.titv;
 
 import java.io.IOException;
 import java.util.*;
