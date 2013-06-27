@@ -11,6 +11,7 @@ public class VcfLine {
     private List<String> alts;
     private BigInteger pos;
     private String chrom;
+    private boolean isIndel;
 
     public VcfLine(String line) {
         StringTokenizer tokenizer = new StringTokenizer(line);
@@ -22,14 +23,22 @@ public class VcfLine {
         setPos(new BigInteger(vcfFields.get(1)));
         setRef(vcfFields.get(3));
         alts = new ArrayList<String>(Arrays.asList(vcfFields.get(4).split(",")));
+        isIndel = line.contains("INDEL");
     }
 
     public List<String> getTiTv() {
         List<String> answer = new ArrayList<String>();
+        if (isIndel()) {
+            return answer;
+        }
         for (String alt : getAlts()) {
             answer.add(getRef()+" -> "+alt);
         }
         return answer;
+    }
+
+    private boolean isIndel() {
+        return isIndel;
     }
 
     public String getRef() {
