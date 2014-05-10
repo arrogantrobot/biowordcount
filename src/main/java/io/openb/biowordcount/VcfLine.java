@@ -9,7 +9,7 @@ import java.util.StringTokenizer;
 public class VcfLine {
     private String ref;
     private List<String> alts;
-    private BigInteger pos;
+    private Long pos;
     private String chrom;
     private boolean isIndel;
 
@@ -20,7 +20,7 @@ public class VcfLine {
             vcfFields.add(tokenizer.nextToken());
         }
         setChrom(vcfFields.get(0));
-        setPos(new BigInteger(vcfFields.get(1)));
+        setPos(new Long(vcfFields.get(1)));
         setRef(vcfFields.get(3));
         alts = new ArrayList<String>(Arrays.asList(vcfFields.get(4).split(",")));
         isIndel = line.contains("INDEL");
@@ -57,11 +57,11 @@ public class VcfLine {
         this.alts = alts;
     }
 
-    public BigInteger getPos() {
+    public Long getPos() {
         return pos;
     }
 
-    public void setPos(BigInteger pos) {
+    public void setPos(Long pos) {
         this.pos = pos;
     }
 
